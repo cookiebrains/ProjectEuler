@@ -1,10 +1,13 @@
 def MakeMultiplesSet(n, m, upper_lim):
     multiples = set()
-    for anynum in range(1, 1000000):
-        if n * anynum < upper_lim:
-            multiples.add(n * anynum)
-        if m * anynum < upper_lim:
-            multiples.add(m * anynum)
+    i = 1
+    j = 1
+    while (n * i) < upper_lim:
+        multiples.add(n * i)
+        i += 1
+    while (m * j) < upper_lim:
+        multiples.add(m * j)
+        j += 1
     return multiples
 
 
@@ -15,8 +18,8 @@ def SumNumsInSet(n):
     return total
 
 
-def DoWork():
+def doWork():
     print(SumNumsInSet(MakeMultiplesSet(3, 5, 1000)))
 
 
-DoWork()
+doWork()
