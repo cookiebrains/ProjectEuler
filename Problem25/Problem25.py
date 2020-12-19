@@ -8,10 +8,17 @@ def fibonacci():
         a, b = b, a + b
 
 
+# def find_solution():
+#     i = 1
+#     for n in fibonacci():
+#         if math.log10(n) > 999:
+#             return i
+#         i += 1
+
 def find_solution():
     i = 1
     for n in fibonacci():
-        if math.log10(n) > 999:
+        if len(str(n)) > 999:
             return i
         i += 1
 
