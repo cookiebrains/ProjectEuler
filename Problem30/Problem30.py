@@ -1,13 +1,13 @@
 def SumOfDigitsToFifthPower(n):
     result = 0
-    for num in str(n):
-        result += (int(num))**5
+    for dig in str(n):
+        result += (int(dig))**5
     return result
 
 
 def DoWork():
     total = 0
-    for i in range(2, 10000000):
+    for i in range(2, 1000000):
         if SumOfDigitsToFifthPower(i) == i:
             total += i
     print(total)
