@@ -31,5 +31,7 @@ def do_work():
         if abs(x-y) > 540 and (add_consecutive_primes(x, y)) < 1000000 and is_prime(add_consecutive_primes(x, y)):
             print(x, y, x - y, add_consecutive_primes(x, y))
 
+# Some experimenting with function to get the 540 to 550 range
+
 
 do_work()
