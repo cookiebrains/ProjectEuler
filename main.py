@@ -2,7 +2,7 @@ import subprocess
 import os.path
 from os import path
 
-problem_num = 50
+problem_num = 48
 problem_dir = 'Problem' + str(problem_num)
 problem_script = 'Problem' + str(problem_num) + '.py'
 
