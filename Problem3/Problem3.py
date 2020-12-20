@@ -55,6 +55,7 @@ def primeFactorization(n):
     return factorization_list
 
 
+
 def doWork():
     n = 600851475143 
     prime_factors = primeFactorization(n)

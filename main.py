@@ -1,16 +1,14 @@
-# This is a sample Python script.
+import subprocess
+import os.path
+from os import path
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+problem_num = 50
+problem_dir = 'Problem' + str(problem_num)
+problem_script = 'Problem' + str(problem_num) + '.py'
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    if not path.exists(os.path.join(problem_dir, problem_script)):
+        print('that don\'t exist yo')
+    else:
+        subprocess.call(['python', problem_script], cwd=problem_dir)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
