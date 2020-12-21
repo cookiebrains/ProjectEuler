@@ -68,7 +68,7 @@ def memory_intensive():
 # Formula
 # Where magic number = Number of traversals for a path
 # (magic)! / ((magic / 2)! * (magic / 2)!)
-#
+#ok
 # Example for 20 x 20 grid
 # 40 possible traversals (think 20 right and 20 down)
 # 40! / (20! * 20!) = 137846528820
