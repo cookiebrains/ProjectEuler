@@ -1,25 +1,32 @@
-import subprocess
-import os.path
-from os import path
 from utilz import MyStopwatch
+from problems import problem_145 as problem
 
-problem_num = 11
-problem_dir = 'Problem' + str(problem_num)
-problem_script = 'Problem' + str(problem_num) + '.py'
+
+def get_problem_num():
+    problem_num_string = ''
+    found = False
+    for c in problem.__name__:
+        if c.isdigit():
+            found = True
+            problem_num_string += c
+        elif not c.isdigit() and found:
+            break
+    return problem_num_string
 
 
 if __name__ == '__main__':
-    if not path.exists(os.path.join(problem_dir, problem_script)):
-        print(f'that problem don\'t exist, yo ({problem_num})')
-        exit(-1)
-    print(f'Problem number {problem_num}')
+    print(f'Problem number {get_problem_num()}')
     print('-----------------')
     print('')
+
     sw = MyStopwatch()
     sw.start('total')
-    subprocess.call(['python', problem_script], cwd=problem_dir, shell=True)
+
+    problem.run()
+
     sw.stop('total')
+
     print('')
     print('-----------------')
-    sw.print_all()
 
+    sw.print_all()
