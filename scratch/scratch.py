@@ -68,3 +68,11 @@ def progress_bar_test():
 
 
 progress_bar_test()
+
+
+def generate_index_pairs(lower_lim, upper_lim):
+    pairs = [(x, y)
+             for x in range(lower_lim, upper_lim)
+             for y in range((x + 1), (upper_lim + 1))
+             ]
+    return pairs
