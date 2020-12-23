@@ -1,0 +1,1 @@
+17: nested for loops, joining all elements on a list, looping over dictionary values
