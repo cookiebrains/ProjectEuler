@@ -1,8 +1,11 @@
 import time
 import math
+from functools import reduce
+from operator import mul
 from stopwatch import Stopwatch
 from utilz import MyStopwatch
 import progressbar
+from utilz import factor_utils
 
 
 def instance_count_test():
@@ -67,12 +70,23 @@ def progress_bar_test():
         fake_long_running(250)
 
 
-progress_bar_test()
-
-
 def generate_index_pairs(lower_lim, upper_lim):
     pairs = [(x, y)
              for x in range(lower_lim, upper_lim)
              for y in range((x + 1), (upper_lim + 1))
              ]
     return pairs
+
+
+def product(iterable):
+    """Return the product of the numbers in the iterable."""
+    return reduce(mul, iterable, 1)
+
+
+def factors_test():
+    factors = factor_utils.get_factors(76576500)
+    print(factors)
+    print(f'num factors: {len(factors)}')
+
+
+factors_test()
