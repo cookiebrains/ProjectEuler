@@ -1,7 +1,7 @@
 from math import sqrt
 
 
-def get_and_sum_proper_factors(num):
+def get_and_sum_proper_divisors(num):
     factors = [1]
     total = 1
     for i in range(2, int(sqrt(num)) + 1):
@@ -17,9 +17,9 @@ def get_and_sum_proper_factors(num):
 def solution():
     solution_list = []
     for i in range(10000):
-        if get_and_sum_proper_factors(i) > i:
-            a = get_and_sum_proper_factors(i)
-            b = get_and_sum_proper_factors(a)
+        if get_and_sum_proper_divisors(i) > i:
+            a = get_and_sum_proper_divisors(i)
+            b = get_and_sum_proper_divisors(a)
             if b == i:
                 solution_list.append(a)
                 solution_list.append(b)
