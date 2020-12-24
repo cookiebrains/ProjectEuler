@@ -6,13 +6,11 @@ def get_and_sum_proper_factors(num):
     total = 1
     for i in range(2, int(sqrt(num)) + 1):
         if num % i == 0:
-            if i not in factors:
-                factors.append(i)
-                total += i
+            factors.append(i)
+            total += i
             second_factor = int(num / i)
-            if second_factor not in factors:
-                factors.append(second_factor)
-                total += second_factor
+            factors.append(second_factor)
+            total += second_factor
     return total
 
 
