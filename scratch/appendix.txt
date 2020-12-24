@@ -1,1 +1,7 @@
-17: nested for loops, joining all elements on a list, looping over dictionary values
+17: nested for loops,
+    joining all elements on a list,
+    looping over dictionary values
+18: get number array from file,
+    practice function with two dimensional indexing
+    return a new list from values in two separate lines in a two-dimensional array
+    short while loop to return output to single function until condition met
