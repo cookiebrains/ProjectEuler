@@ -53,3 +53,7 @@ def run():
     # print(new_bottom_row(practice_triangle))
     # print(learn_two_dimensional_indexing(practice_triangle))
     print(solution(a))
+
+
+# this only worked by luck. the new bottom row uses list.index and it doesn't do quite what I thought it did.
+# see Mike's example in bottom of 67, which enearthed this bug'
