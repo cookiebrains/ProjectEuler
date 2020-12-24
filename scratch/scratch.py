@@ -75,7 +75,7 @@ def generate_index_pairs(lower_lim, upper_lim):
              for x in range(lower_lim, upper_lim)
              for y in range((x + 1), (upper_lim + 1))
              ]
-    return pairs
+    return pairs 
 
 
 def product(iterable):
