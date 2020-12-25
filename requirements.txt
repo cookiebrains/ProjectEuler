@@ -1,0 +1,5 @@
+numpy==1.19.3
+progressbar2==3.53.1
+python-utils==2.4.0
+six==1.15.0
+stopwatch.py==1.0.1
