@@ -1,9 +1,13 @@
-17: nested for loops,
+17: Letter Counts of word name for all numbers <= 10000
+    nested for loops,
     joining all elements on a list,
     looping over dictionary values
-18: get number array from file,
+18: Maximum Path Sum of triangle array, smaller version of 67, which has correct solution
+    get number array from file,
     practice function with two dimensional indexing
     return a new list from values in two separate lines in a two-dimensional array
     short while loop to return output to single function until condition met
 19: calendar module
 
+22: reading in and parsing a long text string
+    using sorted() to return alphabetized list
