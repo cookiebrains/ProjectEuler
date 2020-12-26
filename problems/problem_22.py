@@ -9,7 +9,7 @@ def get_names(file_path):
 
 def alphabetize(names):
     long_string = names.replace(',', ' ')
-    alphabetized_list = [name for name in long_string.split()]
+    alphabetized_list = [name.lower() for name in (long_string.split())]
     return sorted(alphabetized_list)
 
 
@@ -33,13 +33,25 @@ class Name:
         self.alphabetic_value = value
 
 
-def run():
-    # a = (get_names('input_files/p022_names.txt'))
-    # print(alphabetize(a))
+def solution(alphabetized_list):
+    counter = 1
+    running_total = 0
+    for name in alphabetized_list:
+        tot_value = Name(name, counter).total_value
+        counter += 1
+        running_total += tot_value
+    return running_total
 
-    colin = Name('colin', 234)
-    print(colin.alphabetic_value)
-    print(colin.total_value)
+
+def run():
+    a = (get_names('input_files/p022_names.txt'))
+    b = (alphabetize(a))
+    print(solution(b))
+
+    #
+    # colin = Name('colin', 234)
+    # print(colin.alphabetic_value)
+    # print(colin.total_value)
 
     # name23 = Name('Colin', 234)
     # print(name23.total_value())
