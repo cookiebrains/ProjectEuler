@@ -23,7 +23,7 @@ def get_b_list():
             counter += 1
 
 
-# a has to be even
+# a has to be odd
 def get_a_list():
     list_a = []
     for num in range(-1000, 1000):
@@ -42,3 +42,5 @@ def run():
             if quadratic_prime_generator(x, y) > 70:
                 solution_list.append((x * y))
     print(solution_list)
+
+# played with greater than variable to narrow to solution
