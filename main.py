@@ -1,5 +1,5 @@
 from utilz import MyStopwatch
-from problems import problem_29 as problem
+from problems import problem_31 as problem
 
 
 def get_problem_num():
@@ -30,4 +30,3 @@ if __name__ == '__main__':
     print('-----------------')
 
     sw.print_all()
-# This is the page mike made
