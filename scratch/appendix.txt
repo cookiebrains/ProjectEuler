@@ -14,3 +14,6 @@
 22: alphabetic values of a long list of names
     reading in and parsing a long text string
     using sorted() to return alphabetized list
+
+31: British Coins
+    constructed a dictionary from a for loop, modified dictionary with dynamic program
