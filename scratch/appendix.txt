@@ -17,3 +17,5 @@
 
 31: British Coins
     constructed a dictionary from a for loop, modified dictionary with dynamic program
+
+33: backward indexing when needed to modify items in a list as looping over it - Mike helped fix Reduce Fraction function
