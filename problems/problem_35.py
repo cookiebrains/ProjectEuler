@@ -36,3 +36,5 @@ def get_and_check_all_carousels(num):
 def run():
     # print(get_and_check_all_carousels(197))
     print(solution(1000000))
+
+done
