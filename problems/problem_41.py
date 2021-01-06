@@ -30,3 +30,6 @@ def run():
     print(solution())
 
 # I tried 9 and 8 digit permutations first, returned None
+# 654321
+# int('7' + your_permutation)
+# is_prime check

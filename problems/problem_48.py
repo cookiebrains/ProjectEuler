@@ -16,4 +16,4 @@ def get_sum_of_power_to_powers(highest_power):
 
 
 def run():
-    print(get_sum_of_power_to_powers(1000))
+    print(str(get_sum_of_power_to_powers(1000))[-10:])

@@ -1,5 +1,5 @@
 from utilz import MyStopwatch
-from problems import problem_41 as problem
+from problems import problem_42 as problem
 
 
 def get_problem_num():
