@@ -21,3 +21,5 @@
 33: backward indexing when needed to modify items in a list as looping over it - Mike helped fix Reduce Fraction function
 
 35: log formula for counting digits: math.floor(math.log10(num) +1)
+
+42: parse a text file, is_triangle function, reused Names class with Alphabetic Values method
