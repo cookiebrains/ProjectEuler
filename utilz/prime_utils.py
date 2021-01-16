@@ -41,3 +41,15 @@ def primeFactorization(n):
         if running_total == 1:
             break
     return factorization_list
+
+
+def number_distinct_primes(num):
+    i = 2
+    distinct_primes = set()
+    while i < sqrt(num) or num == 1:
+        if num % i == 0:
+            num = num / i
+            distinct_primes.add(i)
+            i -= 1
+        i += 1
+    return len(distinct_primes) + 1
