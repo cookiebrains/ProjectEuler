@@ -13,20 +13,31 @@ def number_distinct_primes(num):
     return len(distinct_primes) + 1
 
 
+# def solution():
+#     j = 210
+#     while True:
+#         if number_distinct_primes(j) == 4:
+#             j += 1
+#             if number_distinct_primes(j) == 4:
+#                 j += 1
+#                 if number_distinct_primes(j) == 4:
+#                     j += 1
+#                     if number_distinct_primes(j) == 4:
+#                         return j - 3
+#                         break
+#         j += 1
+
 def solution():
-    j = 210
-    while True:
-        if number_distinct_primes(j) == 4:
-            j += 1
-            if number_distinct_primes(j) == 4:
-                j += 1
-                if number_distinct_primes(j) == 4:
-                    j += 1
-                    if number_distinct_primes(j) == 4:
-                        return j - 3
-                        break
-        j += 1
+    n = 210
+    consecutive = []
+    while len(consecutive) < 4:
+        if number_distinct_primes(n) == 4:
+            consecutive.append(n)
+        else:
+            consecutive = []
+        n += 1
+    return consecutive
 
 
 def run():
-    print(solution())
+    print(solution()[0])

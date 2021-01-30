@@ -1,21 +1,35 @@
 from math import sqrt
 
 
-def is_prime(x):
-    if x < 2:
+def is_prime(n):
+    if n == 1:
         return False
-    for i in range(2, int(sqrt(x)) + 1):
-        if x % i == 0:
+    if n == 2:
+        return True
+    if n == 3:
+        return True
+    if n % 2 == 0:
+        return False
+    if n % 3 == 0:
+        return False
+    i = 5
+    w = 2
+    while i * i <= n:
+        if n % i == 0:
             return False
+        i += w
+        w = 6 - w
     return True
 
 
 def get_primes():
-    i = 2
+    yield 2
+    yield 3
+    i = 5
     while True:
         if is_prime(i):
             yield i
-        i += 1
+        i += 2
 
 
 def is_prime_factor(p, num):
