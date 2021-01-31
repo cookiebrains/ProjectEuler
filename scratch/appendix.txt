@@ -23,3 +23,5 @@
 35: log formula for counting digits: math.floor(math.log10(num) +1)
 
 42: parse a text file, is_triangle function, reused Names class with Alphabetic Values method
+
+52: if if if if turned into a loop, by me see 47 for by Mike

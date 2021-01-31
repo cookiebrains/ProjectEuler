@@ -1,4 +1,5 @@
 import numpy as np
+import math
 
 
 def solution():
@@ -11,5 +12,11 @@ def solution():
 
 
 def run():
-    print(solution())
+    # print(solution())
+    # print(math.factorial(23))
+    n = 23
+    fact = 1
 
+    for i in range(1, n + 1):
+        fact = fact * i
+    print(fact)
