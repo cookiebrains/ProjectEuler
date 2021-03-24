@@ -1,2 +1,2 @@
-self:  rank: 9 cards: [8S, KC, 5H, 9H, AD]
-other: rank: 9 cards: [KS, 9D, KH, 8D, AH]
+3, 7, 109, 673
+
