@@ -1,47 +1,47 @@
-# Need to search products of primes that are between 2000 and 5000 and check to see if they are permutations of each other.
+# Returns totient of all numbers smaller than or equal to n.
+def all_totient_values(n):
+    totient_list = [1] * (n + 2)
+    for m in range(2, n + 1):
+        # if not a prime, skip
+        if totient_list[m] != 1:
+            continue
+
+        # multiply all multiples of m by m-1
+        multiplier = m - 1
+        i = m
+        while i <= n:
+            totient_list[i] *= multiplier
+            i += m
+
+        # multiply all multiples of higher powers by m
+        v = m
+        multiplier = m
+        while True:
+            v *= m
+            if v > n:
+                break
+            i = v
+            while i <= n:
+                totient_list[i] *= multiplier
+                i += v
+    return totient_list
+
 
 def is_permutation(a, b):
-    return sorted(a) == sorted(b)
-
-
-def phi(n):
-    result = n  # Initialize result as n
-
-    # Consider all prime factors of n and for every prime factor p, multiply result with (1 - 1 / p)
-    p = 2
-    while p * p <= n:
-
-        # Check if p is a prime factor.
-        if n % p == 0:
-
-            # If yes, then update n and result
-            while n % p == 0:
-                n = n // p
-            result = result * (1.0 - (1.0 / float(p)))
-        p = p + 1
-
-    # If n has a prime factor greater than sqrt(n)
-    # (There can be at-most one such prime factor)
-    if n > 1:
-        result = result * (1.0 - (1.0 / float(n)))
-
-    return int(result)
+    return sorted([d for d in str(a)]) == sorted([d for d in str(b)])
 
 
 def solution():
     ratio = 2
     answer = 0
-    for num in range(2, 10000000):
-        if is_permutation(str(num), str(phi(num))) and num / phi(num) < ratio:
-            ratio = num / phi(num)
-            answer = num
+    totient_values = all_totient_values(10000000)
+    for i in range(2, 10000000):
+        if is_permutation(i, totient_values[i]) and i / totient_values[i] < ratio:
+            ratio = i / totient_values[i]
+            answer = i
+
     return answer
 
 
 def run():
-
     print(solution())
-
-
-
-
